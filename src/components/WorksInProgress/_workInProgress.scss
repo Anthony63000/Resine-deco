@@ -1,0 +1,55 @@
+.worksInProgress {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    padding: 0 50px;
+
+    @include L {
+        padding: 0 40px;
+    }
+
+    @include M {
+        padding: 0 30px;
+    }
+
+    @include S {
+        padding: 0 20px;
+    }
+
+    &-image {
+        height: 200px;
+        border-radius: 5px;
+        box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.3);
+
+        @include S {
+            height: 150px;
+        }
+    }
+
+    &-text {
+        font-size: 28px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        text-align: center;
+
+        @include M {
+            font-size: 22px;
+        }
+    }
+
+    &-subText {
+        font-size: 18px;
+        letter-spacing: 1px;
+        text-align: center;
+
+        @include M {
+            font-size: 16px;
+        }
+
+        @include S {
+            font-size: 14px;
+        }
+    }
+}

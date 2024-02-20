@@ -1,0 +1,212 @@
+.unfolding {
+    padding: 0 50px;
+    margin-top: 50px;
+    position: relative;
+
+    @include L {
+        padding: 0 40px;
+    }
+
+    @include M {
+        padding: 0 30px;
+    }
+
+    @include S {
+        padding: 0 20px;
+    }
+
+    &-top {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 30px;
+
+        @include M {
+            align-items: center;
+        }
+
+        &-title {
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            @include M {
+                font-size: 18px;
+            }
+
+            @include S {
+                font-size: 16px;
+            }
+        }
+
+        &-subTitle {
+            font-size: 18px;
+            letter-spacing: 1px;
+
+            @include M {
+                font-size: 16px;
+                text-align: center;
+            }
+
+            @include S {
+                font-size :14px;
+            }
+    
+        }
+    }
+
+    &-middle {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        grid-row-gap: 20px;
+        grid-column-gap: 20px;
+
+        @include M {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-card {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border-radius: 5px;
+            align-items: center;
+            gap: 25px;
+            box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.1);
+            transition: all 350ms ease;
+
+            &:hover {
+                background-color: rgba($color: red, $alpha: 0.2);
+            }
+
+            &-image {
+                width: 50px;
+                
+                @include S {
+                    width: 40px;
+                }
+            }
+
+            &-title {
+                font-size: 16px;
+                text-transform: uppercase;
+                text-align: center;
+
+                @include S {
+                    font-size: 14px;
+                }
+            }
+
+            &-description {
+                line-height: 1.5;
+                text-align: justify;
+
+                @include S {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &-one {
+            grid-column: 1 ;
+            grid-row: 1;
+        }
+
+        &-two {
+            grid-column: 2 / 3;
+            grid-row: 1;
+        }
+
+        &-three {
+            grid-column: 3 / 3;
+            grid-row: 1;
+        }
+
+        &-four {
+            grid-column: 1;
+            grid-row: 2;
+            transform: translateX(50%);
+
+            @include M {
+                transform: none;
+            }
+        }
+
+        &-five {
+            grid-column: 3;
+            grid-row: 2;
+            transform: translateX(-50%);
+
+            @include M {
+                transform: none;
+            }
+        }
+    }
+
+    &-bottom {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 50px;
+        align-items: center;
+        position: relative;
+        padding: 25px 0;
+        color: white;
+        
+        &-found {
+            width: 100vw;
+            position: absolute;
+            z-index: -1;
+            bottom: 0;
+            border: 1px solid;
+            top: 0;
+            background-color: rgba($color: #000000, $alpha: 0.8);
+        }
+
+        &-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+
+            &-text {
+                font-size: 30px;
+                letter-spacing: 1px;
+
+                @include M {
+                    font-size: 22px;
+                }
+
+                @include S {
+                    font-size: 18px;
+                }
+            }
+    
+            &-link {
+                width: fit-content;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-size: 18px;
+                background-color: rgba($color: red, $alpha: 0.9);
+                transition: all 350ms ease;
+                box-shadow: 0 0 6px red;
+
+                @include M {
+                    font-size: 16px;
+                }
+
+                @include S {
+                    font-size: 14px;
+                }
+    
+                &:hover {
+                    transform: translateY(5px) scale(1.10);
+                }
+            }
+        }
+    }
+}

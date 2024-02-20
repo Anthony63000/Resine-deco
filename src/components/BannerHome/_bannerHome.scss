@@ -1,0 +1,142 @@
+.bannerHome {
+    position: relative;
+    height: 700px;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 151px;
+
+    @include L {
+        padding: 0 40px;
+        height: 550px;
+        margin-top: 200px;
+    }
+
+    @include M {
+        padding: 0 30px;
+        margin-top: 151px;
+        height: 400px;
+    }
+
+    @include S {
+        padding: 0 20px;
+        margin-top: 120px;
+        height: 300px;
+    }
+
+    &-fixed {
+        overflow: hidden;
+        width: 100vw;
+        position: absolute;
+        z-index: -1;
+
+        &-found {
+            width: 100vw;
+            height: 700px; 
+            filter: brightness(45%);
+            box-sizing: border-box;
+            animation: animateZoomBanner 30s ease-in-out infinite;
+            
+            @include L {
+                height: 550px;
+            }
+
+            @include M {
+                height: 400px;
+            }
+
+            @include S {
+                height: 300px;
+            }
+        }
+    }
+}
+
+.bannerHome-content {
+    position: relative;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+
+    &-image {
+        height: 150px;
+
+        @include L {
+            height: 135px;
+        }
+
+        @include M {
+            height: 80px;
+        }
+
+        @include S {
+            height: 60px;
+        }
+    }
+
+    &-title {
+        font-size: 35px;
+        margin-top: 40px;
+        text-transform: uppercase;
+        text-align: center;
+
+        @include L {
+            font-size: 28px;
+        }
+
+        @include M {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        @include S {
+            font-size: 18px;
+        }
+    }
+
+    &-text {
+        font-size: 26px;
+        margin-top: 15px;
+        text-align: center;
+
+        @include L {
+            font-size: 22px;
+        }
+
+        @include M {
+            font-size: 16px;
+        }
+
+        @include S {
+            font-size: 14px;
+        }
+    }
+
+    &-link {
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 18px;
+        background-color: rgba($color: red, $alpha: 0.9);
+        transition: all 350ms ease;
+        box-shadow: 0 0 6px red;
+        margin-top: 40px;
+
+        @include M {
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        @include S {
+            font-size: 14px;
+        }
+
+        &:hover {
+            transform: translateY(5px) scale(1.10);
+        }
+    }
+}

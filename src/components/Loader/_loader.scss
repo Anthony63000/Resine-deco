@@ -1,0 +1,28 @@
+.loader {
+    position: fixed;
+    z-index: 9999;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    animation: animateLoader 1900ms ease forwards;
+
+    &-image {
+        width: 20%;
+
+        @include L {
+            width: 30%;
+        }
+
+        @include M {
+            width: 50%;
+        }
+
+        @include L {
+            width: 60%;
+        }
+    }
+}

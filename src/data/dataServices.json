@@ -1,0 +1,46 @@
+
+{
+    "dataService": [
+        {
+            "id": 1,
+            "mode": "resine",
+            "bannerImage": "./images/services/résine.webp",
+            "bannerImageAlt": "Image d'une toile de résine",
+            "title": "Résine Epoxy",
+            "description": "La résine époxy est un matériau polyvalent utilisé pour créer des revêtements de sols lisses et brillants. Elle est composée de deux composants, une résine et un durcisseur, qui réagissent chimiquement pour former une surface solide et durable. La résine époxy offre une grande variété de couleurs et de finitions, ainsi qu'une résistance exceptionnelle aux taches, aux rayures et aux produits chimiques. Contactez-moi pour découvrir comment la résine époxy peut embellir et protéger vos sols."
+        },
+        {
+            "id": 2,
+            "mode": "moquette",
+            "bannerImage": "./images/services/moquetteDeMarbre.webp",
+            "bannerImageAlt": "Image de plusieurs échantillons de moquette de marbre",
+            "title": "Moquette de marbre",
+            "description": "La moquette de marbre est un revêtement de sol élégant et sophistiqué composé de morceaux de marbre de différentes couleurs et tailles intégrés dans une base de ciment ou de résine. Cette technique crée un sol lisse et brillant, offrant à la fois beauté et durabilité à votre espace intérieur. Chaque morceau de marbre est soigneusement sélectionné pour créer un motif unique et personnalisé. Contactez-moi pour découvrir comment la moquette de marbre peut transformer votre espace."
+        },
+        {
+            "id": 3,
+            "mode": "béton",
+            "bannerImage": "./images/services/bétonCiré.webp",
+            "bannerImageAlt": "Image d'un béton ciré gris",
+            "title": "Béton Ciré",
+            "description": "Le béton ciré est un revêtement de sol moderne et polyvalent qui offre un aspect industriel et contemporain à votre espace intérieur. Il est composé de ciment, de sable fin et de résine, et est appliqué en couches minces pour créer une surface lisse et uniforme. Le béton ciré peut être teinté dans une variété de couleurs et fini avec un scellant protecteur pour une durabilité accrue. Ce revêtement est non seulement esthétique, mais aussi facile à entretenir et résistant aux taches. Contactez-moi pour en savoir plus sur la façon dont le béton ciré peut transformer votre sol."
+        },
+        {
+            "id": 4,
+            "mode": "stuc",
+            "bannerImage": "./images/services/stuc.webp",
+            "bannerImageAlt": "Image d'un enduit décoratif Stuc",
+            "title": "Enduit décoratif Stuc",
+            "description": "L'enduit décoratif stuc est une technique ancienne de décoration murale qui offre une apparence luxueuse et intemporelle à votre intérieur. Composé de chaux, de poudre de marbre et de pigments naturels, le stuc est appliqué en couches pour créer une texture élégante et raffinée sur les murs. Ce revêtement est hautement personnalisable et peut être teinté dans une variété de couleurs pour s'adapter à n'importe quel style de décoration. L'enduit décoratif stuc ajoute une touche de sophistication à votre espace tout en offrant une durabilité exceptionnelle. Contactez-moi pour découvrir comment le stuc peut embellir vos murs et transformer votre intérieur."
+        },
+        {
+            "id": 5,
+            "mode": "maçonnerie",
+            "bannerImage": "./images/services/maçonnerie.webp",
+            "bannerImageAlt": "Image d'une sacoche d'un maçon avec des outis à l'intérieur",
+            "title": "Maçonnerie",
+            "description": "Les petits travaux de maçonnerie traditionnelle consistent en des interventions sur des structures en maçonnerie telles que des murs, des chainages, des seuils, des ouvertures, etc. Contactez nous pour plus d'informations sur les travaux de maçonnerie."
+        }
+    ]
+}
+

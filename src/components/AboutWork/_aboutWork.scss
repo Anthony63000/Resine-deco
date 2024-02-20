@@ -1,0 +1,158 @@
+.aboutWork {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 0 50px;
+
+    @include L {
+        padding: 0 40px;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 40px;
+    }
+
+    @include M {
+        padding: 0 30px;
+    }
+
+    @include S {
+        padding: 0 20px;
+    }
+
+    &-left {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px;
+        position: relative;
+
+        @include L {
+            width: 95%;
+        }
+
+        @include M {
+            width: 90%;
+        }
+
+        @include S {
+            width: 100%;
+        }
+
+        &::before {
+            content: "";
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: -10px;
+            left: -21px;
+            border-top: 4px solid red;
+            border-left: 4px solid red;
+            animation: animateZoomBanner 10s ease infinite;
+
+            @include S {
+                display: none;
+            }
+        }
+
+        &::after {
+            content: "";
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            bottom: 0;
+            right: -10px;
+            border-bottom: 4px solid red;
+            border-right: 4px solid red;
+            animation: animateZoomBanner 10s ease infinite;
+
+            @include S {
+                display: none;
+            }
+        }
+
+        &-title {
+            font-size: 22px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            @include M {
+                font-size: 18px;
+            }
+
+            @include S {
+                font-size: 15px;
+            }
+        }
+
+        &-text {
+            line-height: 1.5;
+            text-align: justify;
+            font-size: 18px;
+
+            @include M {
+                font-size: 16px;
+            }
+
+            @include S {
+                font-size: 14px;
+            }
+        }
+
+        &-link {
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            margin: 0 auto;
+            width: fit-content;
+            background-color: rgba($color: red, $alpha: 0.9);
+            transition: all 350ms ease;
+            box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.3);
+
+            @include S {
+                font-size: 14px;
+            }
+
+            &:hover {
+                transform: translateY(5px) scale(1.10);
+            }
+        }
+    }
+
+    &-right {
+        width: 40%;
+        padding: 50px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+
+        @include L {
+            justify-content: center;
+            width: 100%;
+            padding: 0;
+        }
+
+        &-image {
+            width: 70%;
+            object-fit: cover;
+            border-radius: 5px;
+            position: relative;
+
+            @include L {
+                width: 35%;
+            }
+
+            @include M {
+                width: 50%;
+            }
+
+            @include S {
+                width: 70%;
+            }
+        }
+    }
+}
