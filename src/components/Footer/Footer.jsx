@@ -24,9 +24,9 @@ const Footer = () => {
                             />
                         </div>
                         <div className="footer-found-container-top-columns">
-                            <h5 className="footer-found-container-top-columns-title">
+                            <h4 className="footer-found-container-top-columns-title">
                                 Navigation
-                            </h5>
+                            </h4>
                             <LinkFooter 
                                 link="Accueil"
                                 linkTarget={"/"}
@@ -45,9 +45,9 @@ const Footer = () => {
                             />
                         </div>
                         <div className="footer-found-container-top-columns">
-                            <h5 className="footer-found-container-top-columns-title">
+                            <h4 className="footer-found-container-top-columns-title">
                                 Nos prestations
-                            </h5>
+                            </h4>
                             <LinkFooterService 
                                 link="Résine Epoxy 3D"
                                 linkTarget={"/services"}
@@ -70,9 +70,9 @@ const Footer = () => {
                             />
                         </div>
                         <div className="footer-found-container-top-columns">
-                            <h5 className="footer-found-container-top-columns-title">
+                            <h4 className="footer-found-container-top-columns-title">
                                 Contact | Résine'deco63
-                            </h5>
+                            </h4>
                             <p className="footer-found-container-top-columns-link">
                                 tél : 07 60 81 59 73
                             </p>

@@ -13,9 +13,9 @@ const UnfoldingCard = ({
                 src={unfoldingCardImage}
                 alt={unfoldingCardAltImage} 
             />
-            <h5 className="unfolding-middle-card-title">
+            <h4 className="unfolding-middle-card-title">
                 {title}
-            </h5>
+            </h4>
             <p className="unfolding-middle-card-description">
                 {description}
             </p>

@@ -75,7 +75,7 @@
             &-button {
                 border: none;
                 font-family: 'Dosis', sans-serif;
-                background-color: rgba($color: red, $alpha: 0.9);
+                background-color: rgba($color: black, $alpha: 1);
                 padding: 10px 15px;
                 color: white;
                 font-size: 13px;
@@ -88,7 +88,7 @@
 
                 &:hover {
                     transform: scale(1.1) translateY(-5px);
-
+                    background-color: red;
                 }
             }
         }
@@ -123,9 +123,9 @@
             border-radius: 5px;
             text-decoration: none;
             font-size: 18px;
-            background-color: rgba($color: red, $alpha: 0.9);
+            background-color: rgba($color: black, $alpha: 1);
             transition: all 350ms ease;
-            box-shadow: 0 0 6px red;
+            box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.3);
 
             @include M {
                 font-size: 16px;
@@ -137,6 +137,7 @@
 
             &:hover {
                 transform: translateY(5px) scale(1.10);
+                background-color: red;
             }
         }
     }

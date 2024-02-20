@@ -17,6 +17,7 @@ const NetworkAbsolute = () => {
                  networkImage={IntagramLogo}
                  networkClass={"networkAbsolute-link"}
                  networkClassImage={"networkAbsolute-link-image"}
+                 networkAltImage="Logo de instagram qui réprésente une caméra avec un fond violet"
             />
         </section>
     )
