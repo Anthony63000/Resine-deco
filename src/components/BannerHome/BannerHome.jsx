@@ -25,7 +25,7 @@ const BannerHome = () => {
                 <p className="bannerHome-content-text">
                     Application d'enduit type résine Epoxy 3D | Moquette de marbre | Béton ciré | Enduit décoratif Stuc | Travaux de maçonnerie
                 </p>
-                <Link to={"/services"}className="bannerHome-content-link">
+                <Link to={"/prestations"}className="bannerHome-content-link">
                     Découvrez nos prestations
                 </Link>
             </div>

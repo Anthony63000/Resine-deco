@@ -11,7 +11,7 @@ const LinkFooterService = ({ link }) => {
     const locationPath = location.pathname
 
     const openModalFooter = () => {
-        if(locationPath !== "/services") {
+        if(locationPath !== "/prestations") {
             const timer = setTimeout(() => {
                 dispatch(OpenModal())
                 if(link === "Résine Epoxy 3D") {
@@ -47,7 +47,7 @@ const LinkFooterService = ({ link }) => {
         <Link  
             className="footer-found-container-top-columns-link"
             onClick={openModalFooter}
-            to={"/services"}
+            to={"/prestations"}
         >
             {link}
         </Link>

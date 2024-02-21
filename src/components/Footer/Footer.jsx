@@ -1,16 +1,25 @@
 
 import { Link } from "react-router-dom";
-import gitHubLogo from "../../images/network/github.svg";
-import maltLogo from "../../images/network/malt.svg";
 import facebookLogo from "../../images/network/facebook.svg";
 import instaLogo from "../../images/network/instagram.svg"
-import logoEntreprise from "../../images/Logo/logoAnthodev.svg";
 import logoResine from "../../images/Logo/logoR.svg";
 import LinkFooter from "./LinkFooter";
 import LinkFooterService from "./LinkFooterService";
 import LinkNetworkFooter from "./LinkNetworkFooter";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleModalLegal } from "../../redux/LegalNoticeSlice/legalNoticeSlice";
+import LegalNoticeModal from "../LegalNoticeModal/LegalNoticeModal";
 
 const Footer = () => {
+
+    const stateModalLegalNotice = useSelector(state => state.legalNotice.modalState)
+
+    const dispatch = useDispatch()
+
+    const toggleModalLegalNotice = () => {
+        dispatch(toggleModalLegal())
+    }
+
     return (
         <footer>
             <section className="footer">
@@ -33,11 +42,11 @@ const Footer = () => {
                             />
                             <LinkFooter 
                                 link="Nos prestations"
-                                linkTarget={"/services"}
+                                linkTarget={"/prestations"}
                             />
                             <LinkFooter 
                                 link="Nos réalisations"
-                                linkTarget={"/works"}
+                                linkTarget={"/travaux"}
                             />
                             <LinkFooter 
                                 link="Contact"
@@ -50,23 +59,23 @@ const Footer = () => {
                             </h4>
                             <LinkFooterService 
                                 link="Résine Epoxy 3D"
-                                linkTarget={"/services"}
+                                linkTarget={"/prestations"}
                             />
                             <LinkFooterService 
                                 link="Moquette de marbre"
-                                linkTarget={"/services"}
+                                linkTarget={"/prestations"}
                             />
                             <LinkFooterService 
                                 link="Béton ciré"
-                                linkTarget={"/services"}
+                                linkTarget={"/prestations"}
                             />
                             <LinkFooterService
                                 link="Enduit décoratif Stuc"
-                                linkTarget={"/services"}
+                                linkTarget={"/prestations"}
                             />
                             <LinkFooterService
                                 link="Maçonnerie"
-                                linkTarget={"/services"}
+                                linkTarget={"/prestations"}
                             />
                         </div>
                         <div className="footer-found-container-top-columns">
@@ -105,13 +114,16 @@ const Footer = () => {
                             <p className="footer-found-container-bottom-center-copy">
                                 © 2023 Borel Anthony, Résine'deco63. Tous droits réservés.
                             </p>
-                            <p className="footer-found-container-bottom-center-mention">
+                            <p onClick={toggleModalLegalNotice} className="footer-found-container-bottom-center-mention">
                                 Mentions légales
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
+            {stateModalLegalNotice && (
+                <LegalNoticeModal />
+            )}
         </footer>
     )
 }

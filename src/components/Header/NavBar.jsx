@@ -16,12 +16,12 @@ const NavBar = () => {
             <NavLinkHeader
                 icon={faHammer}
                 linkName={"Nos prestations"}
-                link={"/services"}
+                link={"/prestations"}
             />
             <NavLinkHeader
                 linkName={"Nos réalisations"}
                 icon={faPersonDigging}
-                link={"/works"}
+                link={"/travaux"}
             />
             <NavLinkHeader
                 linkName={"Contact"}

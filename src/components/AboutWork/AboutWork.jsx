@@ -20,7 +20,7 @@ const AboutWork = () => {
                     Ensemble, donnons vie à vos espaces et créons des environnements fonctionnels et élégants qui reflètent votre style et 
                     votre personnalité.
                 </p>
-                <Link to={"/works"} className="aboutWork-left-link">
+                <Link to={"/travaux"} className="aboutWork-left-link">
                     Découvrez nos réalisations
                 </Link>
             </div>

@@ -23,8 +23,8 @@ root.render(
         <NetworkAbsolute/>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/services' element={<Services/>}/>
-          <Route path='/works' element={<Works/>}></Route>
+          <Route path='/prestations' element={<Services/>}/>
+          <Route path='/travaux' element={<Works/>}></Route>
           <Route path='/contact' element={<Contact/>}></Route>
         </Routes>
       </Router>

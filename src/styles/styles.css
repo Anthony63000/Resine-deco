@@ -839,6 +839,7 @@ body {
 .footer-found-container-bottom-center-mention {
   letter-spacing: 1px;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .bannerPages {
@@ -2026,4 +2027,50 @@ body {
   .loader-image {
     width: 60%;
   }
+}
+
+.legalNotice {
+  position: fixed;
+  z-index: 9999999;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.legalNotice-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 50px;
+}
+@media (max-width: 1024px) {
+  .legalNotice-container {
+    padding: 20px 40px;
+  }
+}
+@media (max-width: 768px) {
+  .legalNotice-container {
+    padding: 20px 30px;
+  }
+}
+@media (max-width: 425px) {
+  .legalNotice-container {
+    padding: 20px;
+  }
+}
+.legalNotice-container-top {
+  display: flex;
+  justify-content: space-between;
+}
+.legalNotice-container-top-title {
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.legalNotice-container-top-close {
+  font-size: 24px;
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */
