@@ -26,6 +26,7 @@ const ContactCompanyCard = ({
             </p>
             {linkText && (
                 <Link 
+                    target="_blank"
                     className="contactCompany-middle-card-link" 
                     to={link}
                 >

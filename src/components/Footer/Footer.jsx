@@ -83,6 +83,7 @@ const Footer = () => {
                                 <LinkNetworkFooter 
                                     LogoNetwork={facebookLogo}
                                     logoNetworkAlt="Image du logo de facebook qui représsente un f sous un fond bleu"
+                                    targetLink="https://www.facebook.com/resinedeco63"
                                 />
                                 <LinkNetworkFooter 
                                     LogoNetwork={instaLogo}
@@ -96,7 +97,7 @@ const Footer = () => {
                             <p className="footer-found-container-bottom-left-text">
                                 Réalisation du site :
                             </p>
-                            <Link className="footer-found-container-bottom-left-link">
+                            <Link target="_blank" to="https://github.com/Anthony63000" className="footer-found-container-bottom-left-link">
                                 Borel Anthony
                             </Link>
                         </div>

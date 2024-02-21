@@ -39,6 +39,7 @@ const ContactCompany = () => {
                     cardImageAlt="Image lu logo de facebook avec un fond bleu et un f blanc"
                     text="Rejoingnez-nous sur Facebook"
                     linkText="Cliquez-ici"
+                    link="https://www.facebook.com/resinedeco63"
                /> 
                <ContactCompanyCard
                     title="Instagram"

@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { switchHeader } from "../../redux/headerSlice/headerSlice";
 
-import imageBurger from "../../images/burger/burger.svg"
 import NavBarMobile from "./NavBarMobile";
 
 const Header = () => {
@@ -15,6 +14,22 @@ const Header = () => {
     const dispatch = useDispatch();
     const [animateHeader, setAnimateHeader] = useState(false)
     const [animateHeaderBis, setAnimateHeaderBis] = useState(false)
+
+       // On surveille la largeur de l'écran pour afficher le burger pour le menu
+
+       const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+       useEffect(() => {
+           const handleResize = () => {
+               setWindowWidth(window.innerWidth);
+           };
+   
+           window.addEventListener('resize', handleResize);
+   
+           return () => {
+               window.removeEventListener('resize', handleResize);
+           };
+       }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -41,36 +56,20 @@ const Header = () => {
         }
     }, [headerState])
 
-    // On surveille la largeur de l'écran pour afficher le burger pour le menu
-
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-
-    useEffect(() => {
-        const handleResize = () => {
-            setWindowWidth(window.innerWidth);
-        };
-
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-
-    // On gère l'ouverture de la modal pour la version tablette et mobile
-
     return (
         <header>
             {headerState === "welcome" && (
                 <section className={`${"header"} ${animateHeader ? "header-animate" : ""}`}>
-                    <img 
-                        src={Logo}
-                        alt="Image du logo de l'entreprise Résine déco"
-                        className="header-image" 
-                    />
-                    <h1 className="header-title">
-                        Résine'Déco63
-                    </h1>
+                    <div className="header-container">
+                        <img 
+                            src={Logo}
+                            alt="Image du logo de l'entreprise Résine déco"
+                            className="header-container-image" 
+                        />
+                        <h1 className="header-container-title">
+                            Résine'Déco63
+                        </h1>
+                    </div>
                 </section>
             )}
             {headerState === "action" && (
