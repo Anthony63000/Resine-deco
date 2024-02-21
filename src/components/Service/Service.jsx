@@ -17,30 +17,35 @@ const Service = () => {
                     imageCardSrc={resineImage}
                     imageCardSrcAlt="Image d'un réalisation en résine Epoxy"
                     mode="resine"
+                    number="one"
                 />
                 <ServiceCard 
                     title="Moquette de marbre"
                     imageCardSrc={moquetteImage}
                     imageCardSrcAlt="Image de plusieurs échantillons de moquette de marbre"
                     mode="moquette"
+                    number="two"
                 />
                 <ServiceCard 
                     title="Béton ciré"
                     imageCardSrc={betonCireImage}
                     imageCardSrcAlt="Image d'une dalle en béton ciré"
                     mode="béton"
+                    number="three"
                 />
                 <ServiceCard 
                     title="Enduit décoratif Stuc"
                     imageCardSrc={stucImage}
                     imageCardSrcAlt="Image d'un enduit stuc avec une forme qui représente un soleil"
                     mode="stuc"
+                    number="four"
                 />
                 <ServiceCard 
                     title="Maçonnerie"
                     imageCardSrc={maçonnerieImage}
                     imageCardSrcAlt={"Image d'une sacoche d'un maçon avec des outils à l'intérieur"}
                     mode="maçonnerie"
+                    number="five"
                 />
             </div>
             <div className="service-middle">

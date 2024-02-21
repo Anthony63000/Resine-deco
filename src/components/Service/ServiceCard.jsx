@@ -2,7 +2,7 @@
 import { useDispatch } from "react-redux";
 import { OpenModal, toggleModeModal } from "../../redux/servicesSlice/servicesSlice";
 
-const ServiceCard = ({ imageCardSrc, imageCardSrcAlt, title, mode }) => {
+const ServiceCard = ({ imageCardSrc, imageCardSrcAlt, title, mode, number }) => {
 
     const dispatch = useDispatch()
 
@@ -12,7 +12,7 @@ const ServiceCard = ({ imageCardSrc, imageCardSrcAlt, title, mode }) => {
     }
 
     return (
-        <div className="service-top-container">
+        <div className={`${"service-top-container"} ${`service-top-container-${number}`}`}>
             <img
                 className="service-top-container-image" 
                 src={imageCardSrc} 

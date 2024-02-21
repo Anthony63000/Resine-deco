@@ -21,10 +21,19 @@
         display: flex;
         justify-content: space-between;
 
+        @include L {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
         @include M {
+            grid-template-columns: repeat(2, 1fr); 
+        } 
+        
+        @include S {
+            display: flex;
             flex-direction: column;
-            align-items: center;
-            gap: 50px;
         }
         
         &-container {
@@ -38,14 +47,87 @@
             padding-bottom: 20px;
             transition: all 350ms ease;
 
+            @include L {
+                width: 100%;
+            }
+
             @include M {
-                width: 60%;
-                gap: 25px;
+                width: 100%;
+                height: 350px;
             }
 
             @include S {
-                width: 100%;
-                height: 500px;
+                height: 400px;
+            }
+
+            &-one {
+
+                @include L {
+                    grid-column: 1;
+                    grid-row: 1;
+                }   
+
+                @include M {
+                    grid-row: 1;
+                    grid-column: 1 / 2;
+                }
+            }
+
+            &-two {
+
+                @include L {
+                    grid-column: 2 / 3;
+                    grid-row: 1;
+                }
+
+                @include M {
+                    grid-column:  2 / 2;
+                    grid-row: 1;
+                }
+            }
+
+            &-three {
+
+                @include L {
+                    grid-column: 3 / 3;
+                    grid-row: 1;
+                }
+
+                @include M {
+                    grid-row: 2;
+                    grid-column: 1 / 2;
+                }
+            }
+
+            &-four {
+
+                @include L {
+                    grid-column: 1;
+                    grid-row: 2;
+                    transform: translateX(50%);
+                }
+                
+                @include M {
+                    transform: none;
+                    grid-column: 2;
+                }
+            }
+            &-five {
+
+                @include L {
+                    grid-column: 3;
+                    grid-row: 2;
+                    transform: translateX(-50%);
+                }
+                
+                @include M {
+                    grid-column: 2;
+                    grid-row: 3;
+                }
+
+                @include S {
+                    transform: none;
+                }
             }
 
             &:hover {
@@ -53,7 +135,7 @@
             }
 
             &-image {
-                height: 70%;
+                height: 75%;
                 width: 100%;
                 border-radius: 5px;
 
