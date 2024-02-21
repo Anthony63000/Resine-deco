@@ -52,6 +52,12 @@ const LegalNoticeModal = () => {
                         Par email : anthony.borel02@gmail.com
                         "
                     />
+                    <Paragraphe 
+                        title="Utilisation des cookies"
+                        text=" Nous confirmons que ce site web n'utilise pas de cookies. 
+                        Nous ne plaçons aucun fichier texte sur votre appareil sans votre consentement explicite. 
+                        Nous respectons la vie privée de nos utilisateurs et nous nous engageons à fournir une expérience en ligne transparente et sécurisée"
+                    />
                 </div>
             </div>
         </section>

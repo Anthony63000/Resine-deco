@@ -14,6 +14,8 @@
         display: flex;
         flex-direction: column;
         padding: 20px 50px;
+        max-width: 1440px;
+        margin: 0 auto;
 
         @include L {
             padding: 20px 40px;
@@ -30,17 +32,45 @@
         &-top {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 50px;
+            margin-bottom: 75px;
+
+            @include L {
+                margin-bottom: 50px;
+            }
+
+            @include M {
+                margin-bottom: 30px;
+            }
+
+            @include S {
+                margin-bottom: 15px;
+            }
 
             &-title {
                 font-size: 24px;
                 letter-spacing: 1px;
                 text-transform: uppercase;
+
+                @include L {
+                    font-size: 22px;
+                }
+
+                @include M {
+                    font-size: 20px;
+                }
+
+                @include S {
+                    font-size: 16px;
+                }
             }
 
             &-close {
                 font-size: 24px;
                 cursor: pointer;
+
+                @include S {
+                    font-size: 22px;
+                }
             }
         }
 
@@ -48,23 +78,55 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 75px;
+            gap: 40px;
 
+            @include L {
+                gap: 30px;
+            }
+
+            @include M {
+                gap: 20px;
+            }
+
+            @include S {
+                gap: 10px;
+            }
+           
             &-container {
                 display: flex;
                 flex-direction: column;
                 gap: 15px;
-                width: 50%;
+                width: 80%;
+
+                @include M {
+                    width: 100%;
+                }
+
+                @include S {
+                    gap: 10px;
+                }
 
                 &-title {
                     font-size: 20px;
                     letter-spacing: 1px;
                     text-transform: uppercase;
+
+                    @include M {
+                        font-size: 18px;
+                    }
+
+                    @include S {
+                        font-size: 14px;
+                    }
                 }
 
                 &-text {
                     font-size: 18px;
                     letter-spacing: 1px;
+
+                    @include M {
+                        font-size: 16px;
+                    }
                 }
             }
         }

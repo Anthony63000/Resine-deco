@@ -2045,6 +2045,8 @@ body {
   display: flex;
   flex-direction: column;
   padding: 20px 50px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 @media (max-width: 1024px) {
   .legalNotice-container {
@@ -2064,35 +2066,110 @@ body {
 .legalNotice-container-top {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin-bottom: 75px;
+}
+@media (max-width: 1024px) {
+  .legalNotice-container-top {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .legalNotice-container-top {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 425px) {
+  .legalNotice-container-top {
+    margin-bottom: 15px;
+  }
 }
 .legalNotice-container-top-title {
   font-size: 24px;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+@media (max-width: 1024px) {
+  .legalNotice-container-top-title {
+    font-size: 22px;
+  }
+}
+@media (max-width: 768px) {
+  .legalNotice-container-top-title {
+    font-size: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .legalNotice-container-top-title {
+    font-size: 16px;
+  }
+}
 .legalNotice-container-top-close {
   font-size: 24px;
   cursor: pointer;
+}
+@media (max-width: 425px) {
+  .legalNotice-container-top-close {
+    font-size: 22px;
+  }
 }
 .legalNotice-container-middle {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 75px;
+  gap: 40px;
+}
+@media (max-width: 1024px) {
+  .legalNotice-container-middle {
+    gap: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .legalNotice-container-middle {
+    gap: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .legalNotice-container-middle {
+    gap: 10px;
+  }
 }
 .legalNotice-container-middle-container {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 50%;
+  width: 80%;
+}
+@media (max-width: 768px) {
+  .legalNotice-container-middle-container {
+    width: 100%;
+  }
+}
+@media (max-width: 425px) {
+  .legalNotice-container-middle-container {
+    gap: 10px;
+  }
 }
 .legalNotice-container-middle-container-title {
   font-size: 20px;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+@media (max-width: 768px) {
+  .legalNotice-container-middle-container-title {
+    font-size: 18px;
+  }
+}
+@media (max-width: 425px) {
+  .legalNotice-container-middle-container-title {
+    font-size: 14px;
+  }
+}
 .legalNotice-container-middle-container-text {
   font-size: 18px;
   letter-spacing: 1px;
+}
+@media (max-width: 768px) {
+  .legalNotice-container-middle-container-text {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=styles.css.map */
