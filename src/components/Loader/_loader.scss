@@ -14,15 +14,15 @@
         width: 20%;
 
         @include L {
-            width: 30%;
+            width: 20%;
         }
 
         @include M {
-            width: 50%;
+            width: 40%;
         }
 
-        @include L {
-            width: 60%;
+        @include S {
+            width: 40%;
         }
     }
 }

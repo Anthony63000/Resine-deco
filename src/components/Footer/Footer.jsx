@@ -97,6 +97,7 @@ const Footer = () => {
                                 <LinkNetworkFooter 
                                     LogoNetwork={instaLogo}
                                     logoNetworkAlt="Image du logo de instagram qui représente un caméra sous un fond violet"
+                                    targetLink="https://www.instagram.com/resine_deco63/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
                                 />
                             </div>
                         </div>

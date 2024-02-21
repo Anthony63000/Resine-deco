@@ -47,6 +47,7 @@ const ContactCompany = () => {
                     cardImageAlt="Image du logo de intagram avec une camera blanche avec un fond violet"
                     text="Rejoingnez-nous sur Intagram"
                     linkText="Cliquez-ici"
+                    link="https://www.instagram.com/resine_deco63/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
                /> 
             </div>
         </section>
