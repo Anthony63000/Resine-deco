@@ -14,11 +14,11 @@ const NavBarMobile = () => {
             />
             <NavLinkHeader
                 icon={faHammer}
-                link={"/services"}
+                link={"/prestations"}
             />
             <NavLinkHeader
                 icon={faPersonDigging}
-                link={"/works"}
+                link={"/travaux"}
             />
             <NavLinkHeader
                 icon={faAddressCard}
