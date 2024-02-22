@@ -12,7 +12,7 @@ const Works = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);
-        }, 2000); // Remplacez cette valeur par la durée de chargement estimée de votre page
+        }, 2000); 
         return () => clearTimeout(timer);
     }, []);
 

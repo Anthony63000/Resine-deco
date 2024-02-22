@@ -1,24 +1,33 @@
 import React, { useState, useEffect, Suspense } from "react";
-import BannerPages from "../components/BannerPages/BannerPages";
-import Footer from "../components/Footer/Footer";
-import Header from "../components/Header/Header";
+import { useSelector } from "react-redux";
 import Loader from "../components/Loader/Loader";
-import WorksInProgress from "../components/WorksInProgress/WorksInProgress";
-import imageWorks from "../images/banner/travaux.webp";
+
+const Header = React.lazy(() => import("../components/Header/Header"));
+const BannerPages = React.lazy(() => import("../components/BannerPages/BannerPages"));
+const Service = React.lazy(() => import("../components/Service/Service"));
+const Footer = React.lazy(() => import("../components/Footer/Footer"));
+const FreeQuote = React.lazy(() => import("../components/FreeQuote/FreeQuote"));
+const ServiceModal = React.lazy(() => import("../components/ServiceModal/ServiceModal"));
+
+import imageServives from "../images/banner/services.webp";
 
 const Services = () => {
+    const stateModalService = useSelector(state => state.service.modalServiceIsOpen);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);
-        }, 2000); // Remplacez cette valeur par la durée de chargement estimée de votre page
+        }, 2000);
         return () => clearTimeout(timer);
     }, []);
 
     return (
         <div className="app">
             <Suspense fallback={<Loader />}>
+                {stateModalService && (
+                    <ServiceModal />
+                )}
                 {loading ? (
                     <Loader />
                 ) : (
@@ -26,12 +35,14 @@ const Services = () => {
                         <Header />
                         <main>
                             <BannerPages
-                                bannerImage={imageWorks}
-                                bannerImageAlt="Image d'un pavage à l'extérieur"
-                                title="Nos réalisations"
-                                text="Découvrez dès maintenant nos réalisations exceptionnelles, conçues pour répondre à vos besoins les plus exigeants"
+                                bannerImage={imageServives}
+                                bannerImageAlt={"Image d'un homme qui mélange un produit pour faire de la résine"}
+                                title="Nos Prestations"
+                                text="Découvrez dès maintenant notre large gamme de prestations 
+                                    pour répondre à tous vos besoins ! Explorez notre offre complète dès aujourd'hui."
                             />
-                            <WorksInProgress />
+                            <Service />
+                            <FreeQuote />
                         </main>
                         <Footer />
                     </>
