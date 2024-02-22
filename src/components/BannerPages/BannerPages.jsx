@@ -18,12 +18,12 @@ const BannerPages = ({ bannerImage, bannerImageAlt, title, text }) => {
                     alt="Logo de l'entreprise Résine'Déco63" 
                     loading="lazy"
                 />
-                <h2 className="bannerPages-container-title">
+                <h1 className="bannerPages-container-title">
                     {title}
-                </h2>
-                <p className="bannerPages-container-text">
+                </h1>
+                <h2 className="bannerPages-container-text">
                     {text}
-                </p>
+                </h2>
             </div>
         </section>
     )

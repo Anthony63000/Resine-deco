@@ -20,12 +20,12 @@ const BannerHome = () => {
                     className="bannerHome-content-image"
                     loading="lazy"
                 />
-                <h2 className="bannerHome-content-title">
+                <h1 className="bannerHome-content-title">
                     Applicateur de Résine et enduit à Clermont-Ferrand
-                </h2>
-                <p className="bannerHome-content-text">
+                </h1>
+                <h2 className="bannerHome-content-text">
                     Application d'enduit type résine Epoxy 3D | Moquette de marbre | Béton ciré | Enduit décoratif Stuc | Travaux de maçonnerie
-                </p>
+                </h2>
                 <Link to={"/prestations"}className="bannerHome-content-link">
                     Découvrez nos prestations
                 </Link>
