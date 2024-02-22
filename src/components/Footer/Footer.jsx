@@ -86,7 +86,7 @@ const Footer = () => {
                                 tél : 07 60 81 59 73
                             </p>
                             <p className="footer-found-container-top-columns-link">
-                                mail : mario_86@hotmail.fr
+                                mail : resine.deco63@gmail.com
                             </p>
                             <div className="footer-found-container-top-columns-network">
                                 <LinkNetworkFooter 
@@ -108,7 +108,7 @@ const Footer = () => {
                                 Réalisation du site :
                             </p>
                             <Link target="_blank" to="https://github.com/Anthony63000" className="footer-found-container-bottom-left-link">
-                                Borel Anthony
+                                anthony.borel02@gmail.com
                             </Link>
                         </div>
                         <div className="footer-found-container-bottom-center">

@@ -29,8 +29,8 @@ const ContactCompany = () => {
                     title="Contactez-nous par mail"
                     cardImage={mailImage}
                     cardImageAlt="Image d'une enveloppe blanche avec les contour noir"
-                    text="mario_86@hotmail.fr"
-                    link="mailto:mario_86@hotmail.fr"
+                    text="resine.deco63@gmail.com"
+                    link="mailto:resine.deco63@gmail.com"
                     linkText="Cliquez-ici"
                /> 
                <ContactCompanyCard

@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-  <loc>URL_DE_VOTRE_PAGE</loc>
-</url>
+  <url>
+    <loc>https://www.resinedeco63.com</loc>
+    <lastmod>2024-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.resinedeco63.com/prestations</loc>
+    <lastmod>2024-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.resinedeco63.com/travaux</loc>
+    <lastmod>2024-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.resinedeco63.com/contact</loc>
+    <lastmod>2024-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
