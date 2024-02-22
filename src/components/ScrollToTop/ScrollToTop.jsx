@@ -6,6 +6,22 @@ function ScrollToTop() {
 
     useEffect(() => {
         window.scrollTo(0, 0);
+        switch (pathname) {
+            case '/':
+                document.title = "Résine'Déco63 - Accueil";
+                break;
+            case '/prestations':
+                document.title = "Résine'Déco63 - Nos Prestations";
+                break;
+            case '/travaux':
+                document.title = "Résine'Déco63 - Nos Travaux";
+                break;
+            case '/contact':
+                document.title = " Résine'Déco63 - Contactez-nous";
+                break;
+            default:
+                document.title = "Résine'Déco63";
+        }
     }, [pathname]);
 
     return null;
