@@ -18,6 +18,7 @@ const BannerHome = () => {
                     src={logo} 
                     alt="Image du logo de l'entreprise" 
                     className="bannerHome-content-image"
+                    loading="lazy"
                 />
                 <h2 className="bannerHome-content-title">
                     Applicateur de Résine et enduit à Clermont-Ferrand

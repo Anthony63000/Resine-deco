@@ -16,6 +16,7 @@ const BannerPages = ({ bannerImage, bannerImageAlt, title, text }) => {
                     className="bannerPages-container-image" 
                     src={logoEntreprise} 
                     alt="Logo de l'entreprise Résine'Déco63" 
+                    loading="lazy"
                 />
                 <h2 className="bannerPages-container-title">
                     {title}

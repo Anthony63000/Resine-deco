@@ -1,39 +1,42 @@
-import { useEffect, useState } from "react";
-import AboutWork from "../components/AboutWork/AboutWork";
-import BannerHome from "../components/BannerHome/BannerHome";
-import Footer from "../components/Footer/Footer";
-import Header from "../components/Header/Header";
-import Location from "../components/Location/Location";
-import Unfolding from "../components/Unfolding/Unfolding";
+import React, { useState, useEffect, Suspense } from "react";
 import Loader from "../components/Loader/Loader";
 
-const Home = () => {
+// Chargement dynamique des composants
+const Header = React.lazy(() => import("../components/Header/Header"));
+const BannerHome = React.lazy(() => import("../components/BannerHome/BannerHome"));
+const AboutWork = React.lazy(() => import("../components/AboutWork/AboutWork"));
+const Location = React.lazy(() => import("../components/Location/Location"));
+const Unfolding = React.lazy(() => import("../components/Unfolding/Unfolding"));
+const Footer = React.lazy(() => import("../components/Footer/Footer"));
 
-    const [loading, setIsLoading] = useState(true);
+const Home = () => {
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 2000);
+            setLoading(false);
+        }, 2000); // Remplacez cette valeur par la durée de chargement estimée de votre page
         return () => clearTimeout(timer);
     }, []);
 
     return (
         <div className="app">
-            {loading ? (
-                <Loader />
-            ) : (
-                <>
-                    <Header />
-                    <main>
-                        <BannerHome />
-                        <AboutWork />
-                        <Location />
-                        <Unfolding />
-                    </main>
-                    <Footer />
-                </>
-            )}
+            <Suspense fallback={<Loader />}>
+                {loading ? (
+                    <Loader />
+                ) : (
+                    <>
+                        <Header />
+                        <main>
+                            <BannerHome />
+                            <AboutWork />
+                            <Location />
+                            <Unfolding />
+                        </main>
+                        <Footer />
+                    </>
+                )}
+            </Suspense>
         </div>
     );
 }; 
