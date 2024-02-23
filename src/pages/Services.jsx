@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Suspense } from "react";
 import { useSelector } from "react-redux";
 import Loader from "../components/Loader/Loader";
-
+import { Helmet } from "react-helmet";
 
 import Header from "../components/Header/Header";
 import BannerPages from "../components/BannerPages/BannerPages";
@@ -32,6 +32,12 @@ const Services = () => {
                 {stateModalService && (
                     <ServiceModal />
                 )}
+                <Helmet>
+                    <link rel="preload" href={imageServives} as="image" />
+                    <link rel="preload" href={imageServivesL} as="image" />
+                    <link rel="preload" href={imageServivesM} as="image" />
+                    <link rel="preload" href={imageServivesS} as="image" />
+                </Helmet>
                 {loading ? (
                     <Loader />
                 ) : (

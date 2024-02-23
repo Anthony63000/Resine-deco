@@ -1,10 +1,11 @@
 import React, { useState, useEffect, Suspense } from "react";
 import Loader from "../components/Loader/Loader";
+import { Helmet } from "react-helmet";
 
-import ImageBannerContact from "../images/banner/contact/contact.webp"
-import ImageBannerContactL from "../images/banner/contact/contactL.webp"
-import ImageBannerContactM from "../images/banner/contact/contactM.webp"
-import ImageBannerContactS from "../images/banner/contact/contactS.webp"
+import ImageBannerContact from "../images/banner/contact/contact.webp";
+import ImageBannerContactL from "../images/banner/contact/contactL.webp";
+import ImageBannerContactM from "../images/banner/contact/contactM.webp";
+import ImageBannerContactS from "../images/banner/contact/contactS.webp";
 
 const Header = React.lazy(() => import("../components/Header/Header"));
 const BannerPages = React.lazy(() => import("../components/BannerPages/BannerPages"));
@@ -17,13 +18,19 @@ const Contact = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);
-        }, 2000); 
+        }, 2000);
         return () => clearTimeout(timer);
     }, []);
 
     return (
         <div className="app">
             <Suspense fallback={<Loader />}>
+                <Helmet>
+                    <link rel="preload" href={ImageBannerContact} as="image" />
+                    <link rel="preload" href={ImageBannerContactL} as="image" />
+                    <link rel="preload" href={ImageBannerContactM} as="image" />
+                    <link rel="preload" href={ImageBannerContactS} as="image" />
+                </Helmet>
                 {loading ? (
                     <Loader />
                 ) : (
@@ -47,3 +54,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

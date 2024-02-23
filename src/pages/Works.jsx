@@ -10,19 +10,27 @@ import imageWorksL from "../images/banner/travaux/travauxL.webp";
 import imageWorksM from "../images/banner/travaux/travauxM.webp";
 import imageWorksS from "../images/banner/travaux/travauxS.webp";
 
+import { Helmet } from "react-helmet";
+
 const Works = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);
-        }, 2000); 
+        }, 2000);
         return () => clearTimeout(timer);
     }, []);
 
     return (
         <div className="app">
             <Suspense fallback={<Loader />}>
+                <Helmet>
+                    <link rel="preload" href={imageWorks} as="image" />
+                    <link rel="preload" href={imageWorksL} as="image" />
+                    <link rel="preload" href={imageWorksM} as="image" />
+                    <link rel="preload" href={imageWorksS} as="image" />
+                </Helmet>
                 {loading ? (
                     <Loader />
                 ) : (
