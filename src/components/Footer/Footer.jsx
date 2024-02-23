@@ -108,7 +108,7 @@ const Footer = () => {
                             <p className="footer-found-container-bottom-left-text">
                                 Réalisation du site :
                             </p>
-                            <Link target="_blank" to="https://github.com/Anthony63000" className="footer-found-container-bottom-left-link">
+                            <Link target="_blank" to="mailto:anthony.borel02@gmail.com" className="footer-found-container-bottom-left-link">
                                 anthony.borel02@gmail.com
                             </Link>
                         </div>

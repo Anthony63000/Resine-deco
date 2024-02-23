@@ -1295,7 +1295,7 @@ body {
 .serviceModal-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 50px;
   max-width: 1440px;
   width: 50%;
   padding: 25px 0;
@@ -1307,6 +1307,7 @@ body {
 @media (max-width: 768px) {
   .serviceModal-container {
     width: 100%;
+    gap: 25px;
   }
 }
 .serviceModal-container-open {
@@ -1341,40 +1342,36 @@ body {
   height: 25px;
   cursor: pointer;
 }
-.serviceModal-container-top-subTitle {
+.serviceModal-container-top-title {
   font-size: 20px;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 @media (max-width: 768px) {
-  .serviceModal-container-top-subTitle {
+  .serviceModal-container-top-title {
     font-size: 18px;
   }
 }
 @media (max-width: 425px) {
-  .serviceModal-container-top-subTitle {
+  .serviceModal-container-top-title {
     font-size: 16px;
   }
 }
 .serviceModal-container-middle {
-  padding: 0 50px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 75px;
-  height: 70%;
+  padding: 0 50px;
+  gap: 25px;
 }
 @media (max-width: 1024px) {
   .serviceModal-container-middle {
     padding: 0 40px;
-    gap: 50px;
   }
 }
 @media (max-width: 768px) {
   .serviceModal-container-middle {
     padding: 0 30px;
-    gap: 40px;
+    gap: 15px;
   }
 }
 @media (max-width: 425px) {
@@ -1382,135 +1379,115 @@ body {
     padding: 0 20px;
   }
 }
-.serviceModal-container-middle-top {
+.serviceModal-container-middle-left {
   height: -moz-fit-content;
   height: fit-content;
-  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: auto 0;
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 350ms ease;
+}
+.serviceModal-container-middle-left:hover {
+  background-color: red;
+}
+.serviceModal-container-middle-right {
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: auto 0;
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 350ms ease;
+}
+.serviceModal-container-middle-right:hover {
+  background-color: red;
+}
+.serviceModal-container-middle-image {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  margin: 0 auto;
+  height: 250px;
+  margin-bottom: 15px;
 }
 @media (max-width: 768px) {
-  .serviceModal-container-middle-top {
-    width: 60%;
+  .serviceModal-container-middle-image {
+    height: 200px;
+    margin-bottom: 5px;
   }
 }
 @media (max-width: 425px) {
-  .serviceModal-container-middle-top {
-    width: 75%;
+  .serviceModal-container-middle-image {
+    height: 175px;
   }
 }
-.serviceModal-container-middle-top-image {
-  width: 100%;
-  border-radius: 5px;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+.serviceModal-container-middle-icon {
+  font-size: 23px;
 }
-.serviceModal-container-middle-bottom {
-  width: 100%;
-}
-.serviceModal-container-middle-bottom-description {
-  width: 100%;
-  text-align: justify;
-  letter-spacing: 1px;
-  font-size: 20px;
-  line-height: 1.5;
-}
-@media (max-width: 1024px) {
-  .serviceModal-container-middle-bottom-description {
+@media (max-width: 768px) {
+  .serviceModal-container-middle-icon {
     font-size: 18px;
   }
 }
-@media (max-width: 768px) {
-  .serviceModal-container-middle-bottom-description {
-    font-size: 16px;
-  }
+.serviceModal-container-middle-text {
+  font-size: 18px;
 }
-@media (max-width: 425px) {
-  .serviceModal-container-middle-bottom-description {
-    font-size: 14px;
+@media (max-width: 768px) {
+  .serviceModal-container-middle-text {
+    font-size: 16px;
   }
 }
 .serviceModal-container-bottom {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
+  padding: 0 50px;
+  flex-direction: column;
+  gap: 15px;
+}
+@media (max-width: 1024px) {
+  .serviceModal-container-bottom {
+    padding: 0 40px;
+  }
 }
 @media (max-width: 768px) {
   .serviceModal-container-bottom {
-    gap: 25px;
+    padding: 0 30px;
   }
 }
 @media (max-width: 425px) {
   .serviceModal-container-bottom {
-    gap: 15px;
+    padding: 0 20px;
   }
 }
-.serviceModal-container-bottom-left {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  cursor: pointer;
-  padding: 10px 20px;
-  border-radius: 5px;
-  background-color: rgba(255, 0, 0, 0.9);
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-  transition: all 350ms ease;
-}
-@media (max-width: 425px) {
-  .serviceModal-container-bottom-left {
-    gap: 5px;
-  }
-}
-.serviceModal-container-bottom-left:hover {
-  transform: translateY(-10px);
-}
-.serviceModal-container-bottom-left-icon {
-  width: 20px;
-  height: 20px;
-  color: white;
-}
-.serviceModal-container-bottom-left-title {
+.serviceModal-container-bottom-title {
+  font-size: 20px;
   letter-spacing: 1px;
-  font-size: 16px;
-  color: white;
+  text-transform: uppercase;
 }
 @media (max-width: 425px) {
-  .serviceModal-container-bottom-left-title {
-    font-size: 14px;
-    display: none;
+  .serviceModal-container-bottom-title {
+    font-size: 18px;
   }
 }
-.serviceModal-container-bottom-right {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  cursor: pointer;
-  padding: 10px 20px;
-  border-radius: 5px;
-  background-color: rgba(255, 0, 0, 0.9);
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-  transition: all 350ms ease;
-}
-@media (max-width: 425px) {
-  .serviceModal-container-bottom-right {
-    gap: 5px;
-  }
-}
-.serviceModal-container-bottom-right:hover {
-  transform: translateY(-10px);
-}
-.serviceModal-container-bottom-right-icon {
-  width: 20px;
-  height: 20px;
-  color: white;
-}
-.serviceModal-container-bottom-right-title {
+.serviceModal-container-bottom-text {
+  text-align: justify;
+  font-size: 18px;
   letter-spacing: 1px;
-  font-size: 16px;
-  color: white;
 }
-@media (max-width: 425px) {
-  .serviceModal-container-bottom-right-title {
-    font-size: 14px;
-    display: none;
+@media (max-width: 768px) {
+  .serviceModal-container-bottom-text {
+    font-size: 16px;
   }
 }
 
@@ -1753,8 +1730,11 @@ body {
 .networkAbsolute-link:first-child {
   background-color: white;
 }
-.networkAbsolute-link:last-child {
+.networkAbsolute-link:nth-child(2) {
   background-color: violet;
+}
+.networkAbsolute-link:last-child {
+  background-color: white;
 }
 .networkAbsolute-link-image {
   width: 20px;

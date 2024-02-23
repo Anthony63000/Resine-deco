@@ -98,38 +98,43 @@ const ServiceModal = () => {
                 `}
             >
                 <div className="serviceModal-container-top">
-                    <h3 className="serviceModal-container-top-subTitle">
+                    <h3 className="serviceModal-container-top-title">
                         {dataServiceSelected.title}
                     </h3>
                     <FontAwesomeIcon onClick={toggleModal} className="serviceModal-container-top-icon" icon={faTimes} />
                 </div>
                 <div className="serviceModal-container-middle">
-                    <div className="serviceModal-container-middle-top">
-                        <img 
-                            className="serviceModal-container-middle-top-image"
-                            src={`${process.env.PUBLIC_URL}${dataServiceSelected.bannerImage}`}
-                            alt={dataServiceSelected.bannerImageAlt} 
+                    <img 
+                        src={`${process.env.PUBLIC_URL}${dataServiceSelected.bannerImage}`}
+                        alt={dataServiceSelected.bannerImageAlt} 
+                        className="serviceModal-container-middle-image"
+                    />
+                    <div onClick={previousService} className="serviceModal-container-middle-left">
+                        <FontAwesomeIcon 
+                            className="serviceModal-container-middle-icon" 
+                            icon={faCircleChevronLeft}
                         />
-                    </div>
-                    <div className="serviceModal-container-middle-bottom">
-                        <p className="serviceModal-container-middle-bottom-description">
-                            {dataServiceSelected.description}
-                        </p>
-                    </div>
-                </div>
-                <div className="serviceModal-container-bottom">
-                    <div onClick={previousService} className={"serviceModal-container-bottom-left"}>
-                        <FontAwesomeIcon className="serviceModal-container-bottom-left-icon" icon={faCircleChevronLeft} />
-                        <p className="serviceModal-container-bottom-left-title">
+                        <p className="serviceModal-container-middle-text">
                             {previousDataService.title}
                         </p>
                     </div>
-                    <div onClick={nextService} className="serviceModal-container-bottom-right">
-                        <p className="serviceModal-container-bottom-right-title">
+                    <div onClick={nextService} className="serviceModal-container-middle-right">
+                        <p className="serviceModal-container-middle-text">
                             {nextDataService.title}
                         </p>
-                        <FontAwesomeIcon className="serviceModal-container-bottom-right-icon" icon={faCircleChevronRight} />
+                        <FontAwesomeIcon 
+                            className="serviceModal-container-middle-icon" 
+                            icon={faCircleChevronRight}
+                        />
                     </div>
+                </div>
+                <div className="serviceModal-container-bottom">
+                    <h4 className="serviceModal-container-bottom-title">
+                        Description
+                    </h4>
+                    <p className="serviceModal-container-bottom-text">
+                        {dataServiceSelected.description}
+                    </p>
                 </div>
             </div>
         </section>

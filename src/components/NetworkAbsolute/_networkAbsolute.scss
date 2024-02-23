@@ -26,8 +26,12 @@
             background-color: white;
         }
 
-        &:last-child {
+        &:nth-child(2) {
             background-color: violet;
+        }
+
+        &:last-child {
+            background-color: white;
         }
         
         &-image {
