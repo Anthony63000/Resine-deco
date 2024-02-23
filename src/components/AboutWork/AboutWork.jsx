@@ -26,6 +26,7 @@ const AboutWork = () => {
             </div>
             <div className="aboutWork-right">
                 <img 
+                    loading="lazy"
                     src={ImageWork}
                     alt="Image vectoriel de travailleur dans le domaine du bâtiment" 
                     className="aboutWork-right-image"

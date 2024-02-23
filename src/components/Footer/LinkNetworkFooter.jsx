@@ -11,6 +11,7 @@ const LinkNetworkFooter = ({ targetLink, LogoNetwork, logoNetworkAlt }) => {
                 src={LogoNetwork} 
                 alt={logoNetworkAlt} 
                 className="footer-found-container-top-columns-network-link-image"
+                loading="lazy"
             />
         </Link>
     )

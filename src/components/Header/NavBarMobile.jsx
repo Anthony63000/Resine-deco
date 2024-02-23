@@ -11,18 +11,22 @@ const NavBarMobile = () => {
             <NavLinkHeader 
                 icon={faHouse}
                 link={"/"}
+                aria="Accueil"
             />
             <NavLinkHeader
                 icon={faHammer}
                 link={"/prestations"}
+                aria="Nos prestations"
             />
             <NavLinkHeader
                 icon={faPersonDigging}
                 link={"/travaux"}
+                aria="Nos travaux"
             />
             <NavLinkHeader
                 icon={faAddressCard}
                 link={"/contact"}
+                aria="Contactez-nous"
             />
         </nav>
     )

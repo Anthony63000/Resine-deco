@@ -28,6 +28,7 @@ const Footer = () => {
                     <div className="footer-found-container-top">
                         <div className="footer-found-container-top-columns">
                             <img 
+                                loading="lazy"
                                 className="footer-found-container-top-columns-image" 
                                 src={logoResine} alt="Image du logo de l'entreprise Résine déco63" 
                             />

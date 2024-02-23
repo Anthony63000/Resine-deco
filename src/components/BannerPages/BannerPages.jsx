@@ -7,7 +7,7 @@ const BannerPages = ({ bannerImage, bannerImageAlt, title, text }) => {
             <div className="bannerPages-fixed">
                 <img
                     className="bannerPages-fixed-found" 
-                    src={bannerImage}
+                    srcSet={bannerImage}
                     alt={bannerImageAlt} 
                 />
             </div>

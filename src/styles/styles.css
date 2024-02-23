@@ -63,7 +63,6 @@ body {
   font-family: "Lora", serif;
   font-weight: 900;
   text-transform: uppercase;
-  color: red;
 }
 @media (max-width: 1024px) {
   .header-container-title {
@@ -148,7 +147,6 @@ body {
   font-family: "Lora", serif;
   text-transform: uppercase;
   font-weight: 900;
-  color: red;
 }
 @media (max-width: 1024px) {
   .headerBis-content-left-title {

@@ -2,9 +2,10 @@
 import { NavLink } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const NavLinkHeader = ({ linkName, icon, link }) => {
+const NavLinkHeader = ({ linkName, icon, link, aria}) => {
     return (
        <NavLink 
+            aria-label={aria}
             to={link} 
             className={({ isActive }) => 
                 isActive 

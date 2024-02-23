@@ -4,7 +4,11 @@ import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Loader from "../components/Loader/Loader";
 import WorksInProgress from "../components/WorksInProgress/WorksInProgress";
-import imageWorks from "../images/banner/travaux.webp";
+
+import imageWorks from "../images/banner/travaux/travaux.webp";
+import imageWorksL from "../images/banner/travaux/travauxL.webp";
+import imageWorksM from "../images/banner/travaux/travauxM.webp";
+import imageWorksS from "../images/banner/travaux/travauxS.webp";
 
 const Works = () => {
     const [loading, setLoading] = useState(true);
@@ -26,7 +30,7 @@ const Works = () => {
                         <Header />
                         <main>
                             <BannerPages
-                                bannerImage={imageWorks}
+                                bannerImage={`${imageWorks} 1440w, ${imageWorksL} 1024w, ${imageWorksM} 768w, ${imageWorksS} 425w`}
                                 bannerImageAlt="Image d'un pavage à l'extérieur"
                                 title="Nos réalisations"
                                 text="Découvrez dès maintenant nos réalisations exceptionnelles, conçues pour répondre à vos besoins les plus exigeants"

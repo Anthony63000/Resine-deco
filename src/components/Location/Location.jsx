@@ -2,6 +2,9 @@ import { Link } from "react-router-dom"
 
 import puyDeDomeImage from "../../images/location/puyDeDome.webp"
 
+import PuydeDomeImageXL from "../../images/location/XL/puyDeDomeXL.webp"
+import PuydeDomeImageS from "../../images/location/S/puyDeDomeS.webp"
+
 const Location = () => {
     return (
         <section className="location">
@@ -28,8 +31,9 @@ const Location = () => {
                 <div className="location-found-container-right">
                     <img 
                         className="location-found-container-right-image"
-                        src={puyDeDomeImage} 
+                        srcSet={`${PuydeDomeImageS} 1440w, ${PuydeDomeImageXL} 1024w, ${PuydeDomeImageS} 425w`}
                         alt="Image du volcan du Puy-de-dôme situé en auvergne" 
+                        loading="lazy"
                     />
                 </div>
             </div>   
