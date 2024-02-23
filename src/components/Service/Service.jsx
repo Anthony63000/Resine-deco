@@ -52,7 +52,7 @@ const Service = () => {
                 <p className="service-middle-text">
                     Rendez vous comptes des résultats des ces prestations
                 </p>
-                <Link className="service-middle-link" to={"/works"}>
+                <Link className="service-middle-link" to={"/travaux"}>
                     Consultez nos réalisations
                 </Link>
             </div>
